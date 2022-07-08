@@ -1,0 +1,3 @@
+[submodule "src/static/antipixel-icons"]
+	path = src/static/antipixel-icons
+	url = https://github.com/mbledkowski/antipixel-icons.git

@@ -9,3 +9,14 @@
   top: 1rem;
   left: 1rem;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  width: 100%;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+}
