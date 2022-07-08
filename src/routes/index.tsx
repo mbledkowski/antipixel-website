@@ -2,20 +2,47 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import Counter from "../islands/Counter.tsx";
-
 export default function Home() {
   return (
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <img
-        src="/logo.svg"
-        height="100px"
-        alt="the fresh logo: a sliced lemon dripping with juice"
-      />
-      <p class={tw`my-6`}>
-        Welcome to `fresh`. Try update this message in the ./routes/index.tsx
-        file, and refresh.
-      </p>
-      <Counter start={3} />
+    <div>
+      <head>
+        <html data-theme="synthwave"></html>
+        <title>Home</title>
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@2.18.1/dist/full.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link rel="stylesheet" href="/main.css" />
+      </head>
+      <div class={tw`drawer drawer-mobile`}>
+        <input id="main-drawer" type="checkbox" class={tw`drawer-toggle`} />
+        <div
+          class={tw`drawer-content flex flex-col items-center justify-center`}
+        >
+          <label
+            for="main-drawer"
+            id="menuLabel"
+            class={tw`btn btn-circle drawer-button`}
+          >
+            <img src="/menu.svg" alt="menu" width="32" />
+          </label>
+          <Counter start={3} />
+        </div>
+        <div class={tw`drawer-side`}>
+          <label for="main-drawer" class={tw`drawer-overlay`}></label>
+          <ul
+            class={tw`menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content`}
+          >
+            <li>
+              <a>Sidebar Item 1</a>
+            </li>
+            <li>
+              <a>Sidebar Item 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

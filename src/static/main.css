@@ -1,0 +1,11 @@
+@media (min-width: 1024px) {
+  #menuLabel {
+    display: none !important;
+  }
+}
+
+#menuLabel {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
